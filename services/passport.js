@@ -14,7 +14,6 @@ passport.use(
     },
     (accessToken, refreshToken, profile, done) => {
       // this is the Google oAuth callback function
-      
       new User({ googleId: profile.id }).save()
     }
   )
